@@ -5,15 +5,21 @@ import WordCard from './WordCard';
 const word = ["Hello", "Apple", "Banana", "World", "Nintendo", "Sony", "Android"];
 
 function App() {
+  
+const rand = word[Math.floor(Math.random() * word.length)]; // rand word
 
-const rand = word[Math.floor(Math.random() * word.length)];
+const NewGame = () => {
+  window.location.reload(false);
+}
 
  return (
-  <div>
+  <div className ="App">
     <h1>! Welcome to Card Game !</h1>
     <h2> Let Guess </h2>
     <WordCard value={rand}/>
+    <button id = "Newgame" className="button" onClick={NewGame}> New Game </button>
   </div>
+  
  );
 }
 
